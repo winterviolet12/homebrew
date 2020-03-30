@@ -13,11 +13,11 @@
 ~~~
 #### 2) cask - applications from Web (VSCode, Chrome, Firefox ...)
 ~~~bash
-brew install cask
+➜  ~ brew install cask
 ~~~
 #### 3) mas - applications from AppStore (Xcode, KakaoTalk ...)
 ~~~bash
-brew install mas
+➜  ~ brew install mas
 ~~~
 #### 4) file [[brew_install.sh](./files/brew_install.sh)]
 ~~~bash
@@ -111,3 +111,105 @@ Available commands:
    vendor      Opens vendor's app page in a browser
    version     Print version number
 ~~~
+
+### 3. backup & restore
+
+##### 1) brew bundle
+
+~~~bash
+➜  ~ brew bundle --help
+Usage: brew bundle subcommand
+
+Bundler for non-Ruby dependencies from Homebrew, Homebrew Cask, Mac App Store
+and Whalebrew.
+
+brew bundle [install]
+
+Install or upgrade all dependencies in a Brewfile.
+
+brew bundle dump
+
+Write all installed casks/formulae/images/taps into a Brewfile.
+
+brew bundle cleanup
+
+Uninstall all dependencies not listed in a Brewfile.
+
+brew bundle check
+
+Check if all dependencies are installed in a Brewfile.
+
+brew bundle exec command
+
+Run an external command in an isolated build environment.
+
+brew bundle list
+
+List all dependencies present in a Brewfile. By default, only Homebrew
+dependencies are listed.
+
+        --file                       Read the Brewfile from this file. Use
+                                     --file=- to pipe to stdin/stdout.
+        --global                     Read the Brewfile from ~/.Brewfile.
+    -v, --verbose                    install output is printed from commands
+                                     as they are run. check prints all missing
+                                     dependencies.
+        --no-upgrade                 install won't run brew upgrade on
+                                     outdated dependencies. Note they may still
+                                     be upgraded by brew install if needed.
+    -f, --force                      dump overwrites an existing Brewfile.
+                                     cleanup actually perform the cleanup
+                                     operations.
+        --no-lock                    install won't output a
+                                     Brewfile.lock.json.
+        --all                        list all dependencies.
+        --brews                      list Homebrew dependencies.
+        --casks                      list Homebrew Cask dependencies.
+        --taps                       list tap dependencies.
+        --mas                        list Mac App Store dependencies.
+        --whalebrew                  list Whalebrew dependencies.
+        --describe                   dump a description comment above each
+                                     line, unless the dependency does not have a
+                                     description.
+        --no-restart                 dump does not add restart_service to
+                                     formula lines.
+        --zap                        cleanup casks using the zap command
+                                     instead of uninstall.
+    -h, --help                       Show this message.
+
+~~~
+
+##### 2) backup
+
+~~~bash
+➜  ~ brew bundle dump
+➜  ~ more Brewfile
+more Brewfile
+tap "adoptopenjdk/openjdk"
+tap "caskroom/cask"
+tap "caskroom/fonts"
+...
+brew "apktool"
+brew "apr"
+brew "apr-util"
+...
+cask "adoptopenjdk11"
+cask "adoptopenjdk12"
+cask "adoptopenjdk8"
+...
+mas "KakaoTalk", id: 869223134
+mas "Keynote", id: 409183694
+mas "Xcode", id: 497799835
+...
+~~~
+
+##### 3) restore
+
+~~~bash
+➜  ~ brew bundle
+Installing adoptopenjdk/openjdk
+Installing caskroom/cask
+Installing caskroom/fonts
+...
+~~~
+
