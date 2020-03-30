@@ -7,7 +7,7 @@
 
 ### 1. install
 
-####1) Homebrew - packages (wget, cask, mas ...)
+#### 1) Homebrew - packages (wget, cask, mas ...)
 ~~~bash
 ➜  ~ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ~~~
