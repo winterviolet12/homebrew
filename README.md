@@ -1,27 +1,25 @@
 ## HomeBrew
 
-#### 1. install
+### 0. site
+#### 1) homepage : https://brew.sh
+#### 2) formulae : https://formulae.brew.sh
 
-#####1) Homebrew
 
+### 1. install
+
+####1) Homebrew - packages (wget, cask, mas ...)
 ~~~bash
 ➜  ~ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ~~~
-
-##### 2) cask
-
+#### 2) cask - applications from Web (VSCode, Chrome, Firefox ...)
 ~~~bash
 brew install cask
 ~~~
-
-##### 3) mas
-
+#### 3) mas - applications from AppStore (Xcode, KakaoTalk ...)
 ~~~bash
 brew install mas
 ~~~
-
-##### 4) file [[brew_install.sh](./files/brew_install.sh)]
-
+#### 4) file [[brew_install.sh](./files/brew_install.sh)]
 ~~~bash
 #!/bin/bash
 # homebrew
@@ -33,12 +31,10 @@ brew install mas
 ~~~
 
 
+### 2. commands
 
-#### 2. Commands
-
-##### 1) brew
-
-~~~
+#### 1) brew
+~~~bash
 ➜  ~ brew
 Example usage:
   brew search [TEXT|/REGEX/]
@@ -64,9 +60,7 @@ Further help:
   man brew
   https://docs.brew.sh
 ~~~
-
-##### 2) cask
-
+#### 2) cask
 ~~~bash
 ➜  ~ brew cask
 Homebrew Cask provides a friendly CLI workflow for the administration
@@ -94,10 +88,8 @@ Commands:
 
 See also "man brew-cask"
 ~~~
-
-##### 3) mas
-
-~~~
+#### 3) mas
+~~~bash
 ➜  ~ mas
 Available commands:
 
