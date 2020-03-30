@@ -1,0 +1,121 @@
+## HomeBrew
+
+#### 1. install
+
+#####1) Homebrew
+
+~~~bash
+➜  ~ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+~~~
+
+##### 2) cask
+
+~~~bash
+brew install cask
+~~~
+
+##### 3) mas
+
+~~~bash
+brew install mas
+~~~
+
+##### 4) file [[brew_install.sh](./files/brew_install.sh)]
+
+~~~bash
+#!/bin/bash
+# homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# cask
+brew install cask
+# mas
+brew install mas
+~~~
+
+
+
+#### 2. Commands
+
+##### 1) brew
+
+~~~
+➜  ~ brew
+Example usage:
+  brew search [TEXT|/REGEX/]
+  brew info [FORMULA...]
+  brew install FORMULA...
+  brew update
+  brew upgrade [FORMULA...]
+  brew uninstall FORMULA...
+  brew list [FORMULA...]
+
+Troubleshooting:
+  brew config
+  brew doctor
+  brew install --verbose --debug FORMULA
+
+Contributing:
+  brew create [URL [--no-fetch]]
+  brew edit [FORMULA...]
+
+Further help:
+  brew commands
+  brew help [COMMAND]
+  man brew
+  https://docs.brew.sh
+~~~
+
+##### 2) cask
+
+~~~bash
+➜  ~ brew cask
+Homebrew Cask provides a friendly CLI workflow for the administration
+of macOS applications distributed as binaries.
+
+Commands:
+
+    --cache    display the file used to cache the Cask
+    audit      verifies installability of Casks
+    cat        dump raw source of the given Cask to the standard output
+    create     creates the given Cask and opens it in an editor
+    doctor     checks for configuration issues
+    edit       edits the given Cask
+    fetch      downloads remote application files to local cache
+    home       opens the homepage of the given Cask
+    info       displays information about the given Cask
+    install    installs the given Cask
+    list       with no args, lists installed Casks; given installed Casks, lists staged files
+    outdated   list the outdated installed Casks
+    reinstall  reinstalls the given Cask
+    style      checks Cask style using RuboCop
+    uninstall  uninstalls the given Cask
+    upgrade    upgrades all outdated casks
+    zap        zaps all files associated with the given Cask
+
+See also "man brew-cask"
+~~~
+
+##### 3) mas
+
+~~~
+➜  ~ mas
+Available commands:
+
+   account     Prints the primary account Apple ID
+   help        Display general or command-specific help
+   home        Opens MAS Preview app page in a browser
+   info        Display app information from the Mac App Store
+   install     Install from the Mac App Store
+   list        Lists apps from the Mac App Store which are currently installed
+   lucky       Install the first result from the Mac App Store
+   open        Opens app page in AppStore.app
+   outdated    Lists pending updates from the Mac App Store
+   reset       Resets the Mac App Store
+   search      Search for apps from the Mac App Store
+   signin      Sign in to the Mac App Store
+   signout     Sign out of the Mac App Store
+   uninstall   Uninstall app installed from the Mac App Store
+   upgrade     Upgrade outdated apps from the Mac App Store
+   vendor      Opens vendor's app page in a browser
+   version     Print version number
+~~~
